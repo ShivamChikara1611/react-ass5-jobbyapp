@@ -110,7 +110,7 @@ class Jobs extends Component {
           />
           <button
             type="button"
-            testid="searchButton"
+            data-testid="searchButton"
             className="search-button"
             onClick={this.getJobDetails}
           >
@@ -253,7 +253,7 @@ class Jobs extends Component {
 
   loaderView = () => (
     <div className="main-loader-container">
-      <div className="loader-container" testid="loader">
+      <div className="loader-container" data-testid="loader">
         <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
       </div>
     </div>
@@ -358,7 +358,11 @@ class Jobs extends Component {
                     name="salary-radio"
                     onChange={this.radioEvent}
                   />
-                  <label htmlFor={eachValue.salaryRangeId} className="label">
+                  <label
+                    value="label"
+                    htmlFor={eachValue.salaryRangeId}
+                    className="label"
+                  >
                     {eachValue.label}
                   </label>
                 </li>
@@ -377,7 +381,7 @@ class Jobs extends Component {
               />
               <button
                 type="button"
-                testid="searchButton"
+                data-testid="searchButton"
                 className="search-button"
                 onClick={this.getJobDetails}
               >
